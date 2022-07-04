@@ -1,11 +1,12 @@
-.col {
-	border: 1px solid black;
-	height: 40px;
-	width: 40px;
-}
-
 .row {
 	display: flex;
 	flex-direction: row;
 }
 
+.col {
+		border: 3px solid #CCCCCC;
+		height: 70px;
+		width: 70px;
+		margin-top: -3px;
+		margin-left: -3px;
+}
