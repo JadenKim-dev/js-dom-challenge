@@ -2,26 +2,26 @@ const BLACK_COL_CLASSNAME = 'col black_col';
 const WHITE_COL_CLASSNAME = 'col white_col';
 const RED_COL_CLASSNAME = 'col red_col';
 
+const CHESS_BOARD_ID = '#grid'
+
 const dr = [-1, 1, -1, 1];
 const dc = [-1, -1, 1, 1];
 
 const isSumOdd = (n1, n2) => (n1 + n2) % 2 == 1;
 
-function ChessBoard(el, rows, cols) {
+const ChessBoard = (rows, cols) => {
 	let axis = [-1, -1];
-	const resultElement = document.querySelector(el);
+	const resultElement = document.querySelector(CHESS_BOARD_ID);
 	
 	const setAxis = (r, c) => {
 		const [rr, cc] = axis;
-		paint(rr, cc, isSumOdd(rr, cc) ? 'b' : 'w');
-		paint(r, c, 'r');
+		paint(rr, cc, isSumOdd(rr, cc) ? BLACK_COL_CLASSNAME : WHITE_COL_CLASSNAME);
+		paint(r, c, RED_COL_CLASSNAME);
 		axis = [r, c];
 	};
 	
-	const paint = (r, c, code) => {
-		const newClassName =
-			code === 'w' ? WHITE_COL_CLASSNAME : code === 'b' ? BLACK_COL_CLASSNAME : RED_COL_CLASSNAME;
-		if (r == -1 && c == -1) return;
+	const paint = (r, c, newClassName) => {
+		if (r === -1 && c === -1) return;
 		for (let i = 0; i <= Math.max(rows, cols); i++) {
 			for (let j = 0; j < 4; j++) {
 				const nr = r + dr[j] * i;
@@ -43,9 +43,7 @@ function ChessBoard(el, rows, cols) {
 			colDiv.dataset.row = r;
 			colDiv.dataset.col = c;
 			if (isSumOdd(r, c)) colDiv.className = BLACK_COL_CLASSNAME;
-			else {
-				colDiv.className = WHITE_COL_CLASSNAME;
-			}
+			else colDiv.className = WHITE_COL_CLASSNAME;
 			rowDiv.appendChild(colDiv);
 		}
 		fragment.appendChild(rowDiv);
