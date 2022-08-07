@@ -1,0 +1,21 @@
+#progresBarContainer {
+	width: 40rem;
+	height: 3rem;
+	background: #EEEEEE;
+	margin-bottom: 0.75rem;
+}
+
+#progresBarGauge {
+	height: 100%;
+	background-color: #1833de;
+	width: 0px;
+}
+
+.loading {
+	animation: loader 3s ease-in;
+}
+
+@keyframes loader {
+	0% { width: 0% }
+	100% { width: 100% }
+}

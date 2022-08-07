@@ -74,7 +74,7 @@ const getRandomColors = function () {
 
 function Score(n) {
 	const titleDiv = document.createElement('div');
-	titleDiv.innerHTML = `Score: ${n}`;
+	titleDiv.innerHTML = `Score: ${n-4}`;
 	
 	const frameDiv = document.createElement('div');
 	frameDiv.className = 'frame';
