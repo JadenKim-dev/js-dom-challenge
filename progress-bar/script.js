@@ -13,13 +13,14 @@ function ProgressBar(el) {
 	
 	let loadingCnt = 0;
 	const increaseLoadingCnt = () => {
-		if (loadingCnt === 0) {
+		if (!loadingCnt) {
 			const gauge = findGauge();
 			gauge.className = LOADING_CLASSNAME;
 		}
+		
 		loadingCnt += 1;
+		
 		const button = findButton();
-		window.button = button;
 		button.innerHTML = `${BUTTON_INITIAL_TEXT} ${loadingCnt}`;
 	}
 	
