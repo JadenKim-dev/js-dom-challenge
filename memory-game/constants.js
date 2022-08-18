@@ -2,7 +2,7 @@ export const HTML_IDS = {
 	BUTTON_ID: 'start-button',
 	CURR_SCORE_ID: 'curr-score',
   HIGH_SCORE_ID: 'high-score',
-	BOARD_ID: 'board',
+	BOARD_ID: 'game-board',
 }
 
 export const HTML_CLASSES = {
