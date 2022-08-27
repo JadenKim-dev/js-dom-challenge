@@ -1,0 +1,58 @@
+#calenderContainer {
+	border: 1px solid lightgray;
+	width: 30rem;
+	height: 80rem;
+	display: flex;
+	overflow: scroll;
+	padding: 0.2rem 0;
+}
+
+#timeContainer {
+	width: 5rem;
+}
+
+#taskContainer {
+	width: 25rem;
+	position: sticky;
+}
+
+#taskElements {
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+
+#firstTime {
+	margin-top: 3.6rem;
+}
+
+#lastTime {
+	padding-bottom: 3.48rem;
+}
+
+.time {
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.divider {
+	margin-top: 4.093rem;
+	border: 1px solid lightgray;
+}
+
+.task {
+	padding: 0.2rem 0.7rem;
+	border-radius: 0.3rem;
+	position: absolute;
+	width: -webkit-fill-available;
+	border: 1px solid white;
+	color: white;
+}
+
+.task-2 {
+	margin-left: 40%;
+}
+
+.task-3 {
+	margin-left: 60%;
+}
